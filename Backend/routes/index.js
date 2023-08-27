@@ -1,7 +1,7 @@
 const express = require('express');
 const tasksRoutes =  require('../routes/tasks.js');
 const usersRoutes = require("../routes/users.js");
-const authRoutes = require("../routes/users.js");
+const authRoutes = require("../routes/auth.js");
 const checkAuth = require('../utils/checkAuth.js');
 
 const router = express.Router();

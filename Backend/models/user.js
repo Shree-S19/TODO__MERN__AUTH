@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
-const{ Schema } = mongoose;
+const { Schema } = mongoose;
 
 const userSchema = new Schema({
     name:{
@@ -11,11 +11,6 @@ const userSchema = new Schema({
         type: String,
         required : true,
         unique : true
-    },
-    user : {
-        type:Schema.Types.ObjectId,
-        ref : "User",
-        required : true
     },
     password : {
         type : String,
