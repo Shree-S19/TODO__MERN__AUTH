@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home.jsx';
 import PrivateRoutes from './Components/PrivateRoutes.jsx';
 import Auth from './Pages/Auth.jsx';
+import EditProfileForm from './Components/profile/EditProfileForm.jsx';
 
 function App() {
     return (
@@ -19,6 +20,8 @@ function App() {
                 <Route element={<PrivateRoutes />}>
                     {/* Use the element prop directly for private routes */}
                     <Route path='/' element={<Home />} />
+                    <Route path='/edit-profile' element={<EditProfileForm/>
+                } />
                     {/* <Route path='/editProfile' element={<EditProfile />} /> */}
                 </Route>
             </Routes>
