@@ -19,7 +19,7 @@ function EditProfileForm() {
 
         const res = await axios.put('/api/users/me',updatedUser);
         toast.success("Profile Updated");
-        setUser(updatedUser);
+        setUser(updatedUsergit );
     }catch(err){
         console.log(err);
     }
