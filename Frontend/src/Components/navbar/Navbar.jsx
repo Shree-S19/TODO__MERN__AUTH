@@ -30,6 +30,7 @@ function Navbar() {
             navigate('/auth');
         }catch(err){
             console.log(err);
+             console.log("Error in Navbar!");
         }
     }
 
