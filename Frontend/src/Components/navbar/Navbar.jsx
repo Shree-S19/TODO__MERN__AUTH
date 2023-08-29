@@ -26,7 +26,7 @@ function Navbar() {
         try{
             await axios.get('api/auth/logout');
             setUser(null);
-            toast.success('Logged out');
+            toast.success('Logged out successfully');
             navigate('/auth');
         }catch(err){
             console.log(err);
