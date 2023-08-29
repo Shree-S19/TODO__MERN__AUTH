@@ -15,6 +15,7 @@ function Navbar() {
             setUser(data);
         }catch(err){
             console.log(err);
+            console.log("Error in Navbar!");
         }
     };
     useEffect(()=>{
