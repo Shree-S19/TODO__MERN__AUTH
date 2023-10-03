@@ -15,6 +15,7 @@ function Navbar() {
             setUser(data);
         }catch(err){
             console.log(err);
+            console.log("Error in Navbar!");
         }
     };
     useEffect(()=>{
@@ -25,10 +26,11 @@ function Navbar() {
         try{
             await axios.get('api/auth/logout');
             setUser(null);
-            toast.success('Logged out');
+            toast.success('Logged out successfully');
             navigate('/auth');
         }catch(err){
             console.log(err);
+             console.log("Error in Navbar!");
         }
     }
 
