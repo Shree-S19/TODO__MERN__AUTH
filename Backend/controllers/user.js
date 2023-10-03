@@ -1,9 +1,18 @@
 const User = require("../models/user.js");
-
+const OAuthUser = require("../models/Oauth.js")
 
 const getUserInfo = async (req,res,next) =>{
     try{
         const data = await User.findById(req.user.id).select('name email tasks');
+        return res.status(200).json(data);
+    }catch(err){
+        return next(err);    
+    }
+}
+
+const getOAuthUserInfo = async (req,res,next) =>{
+    try{
+        const data = await OAuthUser.findById(req.user.id).select('name email tasks');
         return res.status(200).json(data);
     }catch(err){
         return next(err);    
@@ -24,4 +33,4 @@ const updateUser = async(req,res,next) => {
     }
 }
 
-module.exports = {getUserInfo,updateUser};
+module.exports = {getUserInfo,updateUser,getOAuthUserInfo};

@@ -11,7 +11,7 @@ function Navbar() {
 
     const getUser = async () =>{
         try{
-            const {data} = await axios.get('/api/users/me');
+            const {data} = await axios.get('/api/users/OAuthMe');
             setUser(data);
         }catch(err){
             console.log(err);
